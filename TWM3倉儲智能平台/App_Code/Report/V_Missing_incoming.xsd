@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="V_Missing_incoming" targetNamespace="http://tempuri.org/V_Missing_incoming.xsd" xmlns:mstns="http://tempuri.org/V_Missing_incoming.xsd" xmlns="http://tempuri.org/V_Missing_incoming.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="V_Missing_incoming" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="V_Missing_incoming" msprop:Generator_UserDSName="V_Missing_incoming">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtMissing_incoming" msprop:Generator_TableClassName="dtMissing_incomingDataTable" msprop:Generator_TableVarName="tabledtMissing_incoming" msprop:Generator_RowChangedName="dtMissing_incomingRowChanged" msprop:Generator_TablePropName="dtMissing_incoming" msprop:Generator_RowDeletingName="dtMissing_incomingRowDeleting" msprop:Generator_RowChangingName="dtMissing_incomingRowChanging" msprop:Generator_RowEvHandlerName="dtMissing_incomingRowChangeEventHandler" msprop:Generator_RowDeletedName="dtMissing_incomingRowDeleted" msprop:Generator_RowClassName="dtMissing_incomingRow" msprop:Generator_UserTableName="dtMissing_incoming" msprop:Generator_RowEvArgName="dtMissing_incomingRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="prepareID" msprop:Generator_ColumnVarNameInTable="columnprepareID" msprop:Generator_ColumnPropNameInRow="prepareID" msprop:Generator_ColumnPropNameInTable="prepareIDColumn" msprop:Generator_UserColumnName="prepareID" type="xs:string" minOccurs="0" />
+              <xs:element name="prepare_stateID" msprop:Generator_ColumnVarNameInTable="columnprepare_stateID" msprop:Generator_ColumnPropNameInRow="prepare_stateID" msprop:Generator_ColumnPropNameInTable="prepare_stateIDColumn" msprop:Generator_UserColumnName="prepare_stateID" type="xs:string" minOccurs="0" />
+              <xs:element name="PO" msprop:Generator_ColumnVarNameInTable="columnPO" msprop:Generator_ColumnPropNameInRow="PO" msprop:Generator_ColumnPropNameInTable="POColumn" msprop:Generator_UserColumnName="PO" type="xs:string" minOccurs="0" />
+              <xs:element name="Model_name" msprop:Generator_ColumnVarNameInTable="columnModel_name" msprop:Generator_ColumnPropNameInRow="Model_name" msprop:Generator_ColumnPropNameInTable="Model_nameColumn" msprop:Generator_UserColumnName="Model_name" type="xs:string" minOccurs="0" />
+              <xs:element name="ORDERS" msprop:Generator_ColumnVarNameInTable="columnORDERS" msprop:Generator_ColumnPropNameInRow="ORDERS" msprop:Generator_ColumnPropNameInTable="ORDERSColumn" msprop:Generator_UserColumnName="ORDERS" type="xs:string" minOccurs="0" />
+              <xs:element name="ondatetime" msprop:Generator_ColumnVarNameInTable="columnondatetime" msprop:Generator_ColumnPropNameInRow="ondatetime" msprop:Generator_ColumnPropNameInTable="ondatetimeColumn" msprop:Generator_UserColumnName="ondatetime" type="xs:string" minOccurs="0" />
+              <xs:element name="prepare_state" msprop:Generator_ColumnVarNameInTable="columnprepare_state" msprop:Generator_ColumnPropNameInRow="prepare_state" msprop:Generator_ColumnPropNameInTable="prepare_stateColumn" msprop:Generator_UserColumnName="prepare_state" type="xs:string" minOccurs="0" />
+              <xs:element name="物料" msprop:Generator_ColumnVarNameInTable="column物料" msprop:Generator_ColumnPropNameInRow="物料" msprop:Generator_ColumnPropNameInTable="物料Column" msprop:Generator_UserColumnName="物料" type="xs:string" minOccurs="0" />
+              <xs:element name="生產儲位" msprop:Generator_ColumnVarNameInTable="column生產儲位" msprop:Generator_ColumnPropNameInRow="生產儲位" msprop:Generator_ColumnPropNameInTable="生產儲位Column" msprop:Generator_UserColumnName="生產儲位" type="xs:string" minOccurs="0" />
+              <xs:element name="ENTRY_QNT" msprop:Generator_ColumnVarNameInTable="columnENTRY_QNT" msprop:Generator_ColumnPropNameInRow="ENTRY_QNT" msprop:Generator_ColumnPropNameInTable="ENTRY_QNTColumn" msprop:Generator_UserColumnName="ENTRY_QNT" type="xs:string" minOccurs="0" />
+              <xs:element name="UNPULL_QNT" msprop:Generator_ColumnVarNameInTable="columnUNPULL_QNT" msprop:Generator_ColumnPropNameInRow="UNPULL_QNT" msprop:Generator_ColumnPropNameInTable="UNPULL_QNTColumn" msprop:Generator_UserColumnName="UNPULL_QNT" type="xs:string" minOccurs="0" />
+              <xs:element name="缺料數量" msprop:Generator_ColumnVarNameInTable="column缺料數量" msprop:Generator_ColumnPropNameInRow="缺料數量" msprop:Generator_ColumnPropNameInTable="缺料數量Column" msprop:Generator_UserColumnName="缺料數量" type="xs:string" minOccurs="0" />
+              <xs:element name="LOCAL_NAME" msprop:Generator_ColumnVarNameInTable="columnLOCAL_NAME" msprop:Generator_ColumnPropNameInRow="LOCAL_NAME" msprop:Generator_ColumnPropNameInTable="LOCAL_NAMEColumn" msprop:Generator_UserColumnName="LOCAL_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="ONLINE_TIME" msprop:Generator_ColumnVarNameInTable="columnONLINE_TIME" msprop:Generator_ColumnPropNameInRow="ONLINE_TIME" msprop:Generator_ColumnPropNameInTable="ONLINE_TIMEColumn" msprop:Generator_UserColumnName="ONLINE_TIME" type="xs:string" minOccurs="0" />
+              <xs:element name="LABST" msprop:Generator_ColumnVarNameInTable="columnLABST" msprop:Generator_ColumnPropNameInRow="LABST" msprop:Generator_ColumnPropNameInTable="LABSTColumn" msprop:Generator_UserColumnName="LABST" type="xs:string" minOccurs="0" />
+              <xs:element name="INSME" msprop:Generator_ColumnVarNameInTable="columnINSME" msprop:Generator_ColumnPropNameInRow="INSME" msprop:Generator_ColumnPropNameInTable="INSMEColumn" msprop:Generator_UserColumnName="INSME" type="xs:string" minOccurs="0" />
+              <xs:element name="需求數量" msprop:Generator_ColumnVarNameInTable="column需求數量" msprop:Generator_ColumnPropNameInRow="需求數量" msprop:Generator_ColumnPropNameInTable="需求數量Column" msprop:Generator_UserColumnName="需求數量" type="xs:string" minOccurs="0" />
+              <xs:element name="領料數量" msprop:Generator_ColumnVarNameInTable="column領料數量" msprop:Generator_ColumnPropNameInRow="領料數量" msprop:Generator_ColumnPropNameInTable="領料數量Column" msprop:Generator_UserColumnName="領料數量" type="xs:string" minOccurs="0" />
+              <xs:element name="PACK_Schedule" msprop:Generator_ColumnVarNameInTable="columnPACK_Schedule" msprop:Generator_ColumnPropNameInRow="PACK_Schedule" msprop:Generator_ColumnPropNameInTable="PACK_ScheduleColumn" msprop:Generator_UserColumnName="PACK_Schedule" type="xs:string" minOccurs="0" />
+              <xs:element name="UnitsInStock" msprop:Generator_ColumnVarNameInTable="columnUnitsInStock" msprop:Generator_ColumnPropNameInRow="UnitsInStock" msprop:Generator_ColumnPropNameInTable="UnitsInStockColumn" msprop:Generator_UserColumnName="UnitsInStock" type="xs:string" minOccurs="0" />
+              <xs:element name="LGPBE" msprop:Generator_ColumnVarNameInTable="columnLGPBE" msprop:Generator_ColumnPropNameInRow="LGPBE" msprop:Generator_ColumnPropNameInTable="LGPBEColumn" msprop:Generator_UserColumnName="LGPBE" type="xs:string" minOccurs="0" />
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" minOccurs="0" />
+              <xs:element name="SLoc" msprop:Generator_ColumnVarNameInTable="columnSLoc" msprop:Generator_ColumnPropNameInRow="SLoc" msprop:Generator_ColumnPropNameInTable="SLocColumn" msprop:Generator_UserColumnName="SLoc" type="xs:string" minOccurs="0" />
+              <xs:element name="ENTRY_QNT_TODAY" msprop:Generator_ColumnVarNameInTable="columnENTRY_QNT_TODAY" msprop:Generator_ColumnPropNameInRow="ENTRY_QNT_TODAY" msprop:Generator_ColumnPropNameInTable="ENTRY_QNT_TODAYColumn" msprop:Generator_UserColumnName="ENTRY_QNT_TODAY" type="xs:string" minOccurs="0" />
+              <xs:element name="LABST_TOTAL" msprop:Generator_ColumnVarNameInTable="columnLABST_TOTAL" msprop:Generator_ColumnPropNameInRow="LABST_TOTAL" msprop:Generator_ColumnPropNameInTable="LABST_TOTALColumn" msprop:Generator_UserColumnName="LABST_TOTAL" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

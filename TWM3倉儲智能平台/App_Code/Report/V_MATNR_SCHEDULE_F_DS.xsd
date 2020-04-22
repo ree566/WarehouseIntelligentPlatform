@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="V_MATNR_SCHEDULE_F_DS" targetNamespace="http://tempuri.org/V_MATNR_SCHEDULE_F_DS.xsd" xmlns:mstns="http://tempuri.org/V_MATNR_SCHEDULE_F_DS.xsd" xmlns="http://tempuri.org/V_MATNR_SCHEDULE_F_DS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="WorkTimeConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="WorkTimeConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.WorkTimeConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="V_MATNR_SCHEDULE_F_DS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="V_MATNR_SCHEDULE_F_DS" msprop:Generator_UserDSName="V_MATNR_SCHEDULE_F_DS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_MATNR_SCHEDULE_F" msprop:Generator_TableClassName="V_MATNR_SCHEDULE_FDataTable" msprop:Generator_TableVarName="tableV_MATNR_SCHEDULE_F" msprop:Generator_RowChangedName="V_MATNR_SCHEDULE_FRowChanged" msprop:Generator_TablePropName="V_MATNR_SCHEDULE_F" msprop:Generator_RowDeletingName="V_MATNR_SCHEDULE_FRowDeleting" msprop:Generator_RowChangingName="V_MATNR_SCHEDULE_FRowChanging" msprop:Generator_RowEvHandlerName="V_MATNR_SCHEDULE_FRowChangeEventHandler" msprop:Generator_RowDeletedName="V_MATNR_SCHEDULE_FRowDeleted" msprop:Generator_RowClassName="V_MATNR_SCHEDULE_FRow" msprop:Generator_UserTableName="V_MATNR_SCHEDULE_F" msprop:Generator_RowEvArgName="V_MATNR_SCHEDULE_FRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="WERKS" msprop:Generator_ColumnVarNameInTable="columnWERKS" msprop:Generator_ColumnPropNameInRow="WERKS" msprop:Generator_ColumnPropNameInTable="WERKSColumn" msprop:Generator_UserColumnName="WERKS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COMING_DATE" msprop:Generator_ColumnVarNameInTable="columnCOMING_DATE" msprop:Generator_ColumnPropNameInRow="COMING_DATE" msprop:Generator_ColumnPropNameInTable="COMING_DATEColumn" msprop:Generator_UserColumnName="COMING_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MATNR" msprop:Generator_ColumnVarNameInTable="columnMATNR" msprop:Generator_ColumnPropNameInRow="MATNR" msprop:Generator_ColumnPropNameInTable="MATNRColumn" msprop:Generator_UserColumnName="MATNR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CallDate" msprop:Generator_ColumnVarNameInTable="columnCallDate" msprop:Generator_ColumnPropNameInRow="CallDate" msprop:Generator_ColumnPropNameInTable="CallDateColumn" msprop:Generator_UserColumnName="CallDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AccMODATE" msprop:Generator_ColumnVarNameInTable="columnAccMODATE" msprop:Generator_ColumnPropNameInRow="AccMODATE" msprop:Generator_ColumnPropNameInTable="AccMODATEColumn" msprop:Generator_UserColumnName="AccMODATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AccWODATE" msprop:Generator_ColumnVarNameInTable="columnAccWODATE" msprop:Generator_ColumnPropNameInRow="AccWODATE" msprop:Generator_ColumnPropNameInTable="AccWODATEColumn" msprop:Generator_UserColumnName="AccWODATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TotalSTOCK" msprop:Generator_ColumnVarNameInTable="columnTotalSTOCK" msprop:Generator_ColumnPropNameInRow="TotalSTOCK" msprop:Generator_ColumnPropNameInTable="TotalSTOCKColumn" msprop:Generator_UserColumnName="TotalSTOCK" type="xs:decimal" />
+              <xs:element name="DAY_OPEN_QTY" msprop:Generator_ColumnVarNameInTable="columnDAY_OPEN_QTY" msprop:Generator_ColumnPropNameInRow="DAY_OPEN_QTY" msprop:Generator_ColumnPropNameInTable="DAY_OPEN_QTYColumn" msprop:Generator_UserColumnName="DAY_OPEN_QTY" type="xs:decimal" />
+              <xs:element name="Acc_Order_QTY" msprop:Generator_ColumnVarNameInTable="columnAcc_Order_QTY" msprop:Generator_ColumnPropNameInRow="Acc_Order_QTY" msprop:Generator_ColumnPropNameInTable="Acc_Order_QTYColumn" msprop:Generator_UserColumnName="Acc_Order_QTY" type="xs:decimal" />
+              <xs:element name="Add_Order_QTY" msprop:Generator_ColumnVarNameInTable="columnAdd_Order_QTY" msprop:Generator_ColumnPropNameInRow="Add_Order_QTY" msprop:Generator_ColumnPropNameInTable="Add_Order_QTYColumn" msprop:Generator_UserColumnName="Add_Order_QTY" type="xs:int" />
+              <xs:element name="Acc_OPEN_QTY" msprop:Generator_ColumnVarNameInTable="columnAcc_OPEN_QTY" msprop:Generator_ColumnPropNameInRow="Acc_OPEN_QTY" msprop:Generator_ColumnPropNameInTable="Acc_OPEN_QTYColumn" msprop:Generator_UserColumnName="Acc_OPEN_QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RE_Acc_Order_QTY" msprop:Generator_ColumnVarNameInTable="columnRE_Acc_Order_QTY" msprop:Generator_ColumnPropNameInRow="RE_Acc_Order_QTY" msprop:Generator_ColumnPropNameInTable="RE_Acc_Order_QTYColumn" msprop:Generator_UserColumnName="RE_Acc_Order_QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RE_Add_Order_QTY" msprop:Generator_ColumnVarNameInTable="columnRE_Add_Order_QTY" msprop:Generator_ColumnPropNameInRow="RE_Add_Order_QTY" msprop:Generator_ColumnPropNameInTable="RE_Add_Order_QTYColumn" msprop:Generator_UserColumnName="RE_Add_Order_QTY" type="xs:int" minOccurs="0" />
+              <xs:element name="RE_OPEN_QTY" msprop:Generator_ColumnVarNameInTable="columnRE_OPEN_QTY" msprop:Generator_ColumnPropNameInRow="RE_OPEN_QTY" msprop:Generator_ColumnPropNameInTable="RE_OPEN_QTYColumn" msprop:Generator_UserColumnName="RE_OPEN_QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Shortage_QTY" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnShortage_QTY" msprop:Generator_ColumnPropNameInRow="Shortage_QTY" msprop:Generator_ColumnPropNameInTable="Shortage_QTYColumn" msprop:Generator_UserColumnName="Shortage_QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VENDOR" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnVENDOR" msprop:Generator_ColumnPropNameInRow="VENDOR" msprop:Generator_ColumnPropNameInTable="VENDORColumn" msprop:Generator_UserColumnName="VENDOR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SAFETYSTOCK" msprop:Generator_ColumnVarNameInTable="columnSAFETYSTOCK" msprop:Generator_ColumnPropNameInRow="SAFETYSTOCK" msprop:Generator_ColumnPropNameInTable="SAFETYSTOCKColumn" msprop:Generator_UserColumnName="SAFETYSTOCK" type="xs:decimal" />
+              <xs:element name="VENDORNAME" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnVENDORNAME" msprop:Generator_ColumnPropNameInRow="VENDORNAME" msprop:Generator_ColumnPropNameInTable="VENDORNAMEColumn" msprop:Generator_UserColumnName="VENDORNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ENTRY_QNT" msprop:Generator_ColumnVarNameInTable="columnENTRY_QNT" msprop:Generator_ColumnPropNameInRow="ENTRY_QNT" msprop:Generator_ColumnPropNameInTable="ENTRY_QNTColumn" msprop:Generator_UserColumnName="ENTRY_QNT" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

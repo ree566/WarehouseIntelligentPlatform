@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MES_WIPNOREPORT_LIST" targetNamespace="http://tempuri.org/MES_WIPNOREPORT_LIST.xsd" xmlns:mstns="http://tempuri.org/MES_WIPNOREPORT_LIST.xsd" xmlns="http://tempuri.org/MES_WIPNOREPORT_LIST.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MES_WIPNOREPORT_LIST" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="MES_WIPNOREPORT_LIST" msprop:Generator_UserDSName="MES_WIPNOREPORT_LIST">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MES_WIPNOREPORT_LIST" msprop:Generator_TableClassName="MES_WIPNOREPORT_LISTDataTable" msprop:Generator_TableVarName="tableMES_WIPNOREPORT_LIST" msprop:Generator_RowChangedName="MES_WIPNOREPORT_LISTRowChanged" msprop:Generator_TablePropName="_MES_WIPNOREPORT_LIST" msprop:Generator_RowDeletingName="MES_WIPNOREPORT_LISTRowDeleting" msprop:Generator_RowChangingName="MES_WIPNOREPORT_LISTRowChanging" msprop:Generator_RowEvHandlerName="MES_WIPNOREPORT_LISTRowChangeEventHandler" msprop:Generator_RowDeletedName="MES_WIPNOREPORT_LISTRowDeleted" msprop:Generator_RowClassName="MES_WIPNOREPORT_LISTRow" msprop:Generator_UserTableName="MES_WIPNOREPORT_LIST" msprop:Generator_RowEvArgName="MES_WIPNOREPORT_LISTRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ITEM_NO" msprop:Generator_ColumnVarNameInTable="columnITEM_NO" msprop:Generator_ColumnPropNameInRow="ITEM_NO" msprop:Generator_ColumnPropNameInTable="ITEM_NOColumn" msprop:Generator_UserColumnName="ITEM_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="WIP_NO" msprop:Generator_ColumnVarNameInTable="columnWIP_NO" msprop:Generator_ColumnPropNameInRow="WIP_NO" msprop:Generator_ColumnPropNameInTable="WIP_NOColumn" msprop:Generator_UserColumnName="WIP_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="UNIT_NO" msprop:Generator_ColumnVarNameInTable="columnUNIT_NO" msprop:Generator_ColumnPropNameInRow="UNIT_NO" msprop:Generator_ColumnPropNameInTable="UNIT_NOColumn" msprop:Generator_UserColumnName="UNIT_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="STATION_NAME" msprop:Generator_ColumnVarNameInTable="columnSTATION_NAME" msprop:Generator_ColumnPropNameInRow="STATION_NAME" msprop:Generator_ColumnPropNameInTable="STATION_NAMEColumn" msprop:Generator_UserColumnName="STATION_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="C_DATE" msprop:Generator_ColumnVarNameInTable="columnC_DATE" msprop:Generator_ColumnPropNameInRow="C_DATE" msprop:Generator_ColumnPropNameInTable="C_DATEColumn" msprop:Generator_UserColumnName="C_DATE" type="xs:string" minOccurs="0" />
+              <xs:element name="PLAN_QTY" msprop:Generator_ColumnVarNameInTable="columnPLAN_QTY" msprop:Generator_ColumnPropNameInRow="PLAN_QTY" msprop:Generator_ColumnPropNameInTable="PLAN_QTYColumn" msprop:Generator_UserColumnName="PLAN_QTY" type="xs:string" minOccurs="0" />
+              <xs:element name="CT" msprop:Generator_ColumnVarNameInTable="columnCT" msprop:Generator_ColumnPropNameInRow="CT" msprop:Generator_ColumnPropNameInTable="CTColumn" msprop:Generator_UserColumnName="CT" type="xs:string" minOccurs="0" />
+              <xs:element name="OUTPUT_QTY" msprop:Generator_ColumnVarNameInTable="columnOUTPUT_QTY" msprop:Generator_ColumnPropNameInRow="OUTPUT_QTY" msprop:Generator_ColumnPropNameInTable="OUTPUT_QTYColumn" msprop:Generator_UserColumnName="OUTPUT_QTY" type="xs:string" minOccurs="0" />
+              <xs:element name="SEQ" msprop:Generator_ColumnVarNameInTable="columnSEQ" msprop:Generator_ColumnPropNameInRow="SEQ" msprop:Generator_ColumnPropNameInTable="SEQColumn" msprop:Generator_UserColumnName="SEQ" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
