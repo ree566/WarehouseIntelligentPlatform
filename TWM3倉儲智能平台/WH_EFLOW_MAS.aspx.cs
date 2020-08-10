@@ -17,7 +17,7 @@ public partial class WH_EFLOW_MAS : System.Web.UI.Page
     SAPRFC SAPRFC = new SAPRFC();
     #region Add 庫存&待驗數量 by Apple at 20190215
     string strLGORT = "0015,0008,0012,0055,0058", strWERKS = "TWM3";
-    string PREPARATION_FLAG="";
+    string PREPARATION_FLAG = "";
     #endregion
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -28,7 +28,7 @@ public partial class WH_EFLOW_MAS : System.Web.UI.Page
         }
         if (!Page.IsPostBack)
         {
-           
+
             string sScript = null;
             string sScriptl = null;
             string surl = null;
@@ -88,7 +88,7 @@ public partial class WH_EFLOW_MAS : System.Web.UI.Page
 
         if (!txt_MATNR.Text.ToString().Trim().Equals(""))
         {
-            sparam += " AND A.[MATNR]='" + txt_MATNR.Text.ToString().Trim() + "' "; 
+            sparam += " AND A.[MATNR]='" + txt_MATNR.Text.ToString().Trim() + "' ";
         }
 
         if (!cbo_PLANT.SelectedValue.Trim().Equals("ALL"))
@@ -114,7 +114,7 @@ public partial class WH_EFLOW_MAS : System.Web.UI.Page
         }
         else
         {
-            sparam += "WHERE [NO] =" + txt_EFLOW_NO.Text.ToString().Trim() ;
+            sparam += "WHERE [NO] =" + txt_EFLOW_NO.Text.ToString().Trim();
         }
 
         sparam += " AND CONVERT(DATE,C_DATE) BETWEEN '" + txtStartDate.Text + "' AND '" + txtEndDate.Text + "' ";
@@ -123,7 +123,7 @@ public partial class WH_EFLOW_MAS : System.Web.UI.Page
         sparam += " ORDER BY C_DATE ";
         gdv_WH_EFLOW_MAS.DataSource = ATMCdb.reDt(sparam);
         gdv_WH_EFLOW_MAS.DataBind();
-        if (rdoMOVEMENT_TYPE.SelectedValue=="261")
+        if (rdoMOVEMENT_TYPE.SelectedValue == "261")
         {
             lbl_MOVEMENT_TYPE.Text = "領料單明細";
         }
@@ -199,7 +199,7 @@ public partial class WH_EFLOW_MAS : System.Web.UI.Page
             string[] sArrayLGORT = strLGORT.Split(',');
 
             DataView view = new DataView(dt);
-            distinctValues = view.ToTable(true,  "MATNR", "PLANT");
+            distinctValues = view.ToTable(true, "MATNR", "PLANT");
 
             foreach (string SubstrLGORT in sArrayLGORT)
             {
@@ -272,7 +272,7 @@ public partial class WH_EFLOW_MAS : System.Web.UI.Page
         {
             foreach (DataRow od in dt.Rows)
             {
-                if (od["MATNR"].ToString() == query.MATNR.ToString().TrimStart('0') && od["PLANT"].ToString() == query.WERKS.ToString() )
+                if (od["MATNR"].ToString() == query.MATNR.ToString().TrimStart('0') && od["PLANT"].ToString() == query.WERKS.ToString())
                 {
                     // od["Total"] = query.Total;
                     od["LABST"] = query.LABST;
@@ -292,18 +292,18 @@ public partial class WH_EFLOW_MAS : System.Web.UI.Page
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
             //string QA = e.Row.Cells[13].Text;
-            string QA1 = e.Row.Cells[16].Text;
-            string POSTING = ((DropDownList)e.Row.Cells[14].FindControl("ddl_POSTING")).SelectedValue;
-            string STATUS = ((DropDownList)e.Row.Cells[15].FindControl("ddl_STATUS")).SelectedValue;
-            if (QA1 == "處理中" || QA1 == "過帳異常") { e.Row.Cells[16].BackColor = System.Drawing.Color.Red; }
-            if (QA1 == "已關單") { e.Row.Cells[16].BackColor = System.Drawing.Color.Yellow; }
+            string QA1 = e.Row.Cells[14].Text;
+            string POSTING = ((DropDownList)e.Row.Cells[12].FindControl("ddl_POSTING")).SelectedValue;
+            string STATUS = ((DropDownList)e.Row.Cells[13].FindControl("ddl_STATUS")).SelectedValue;
+            if (QA1 == "處理中" || QA1 == "過帳異常") { e.Row.Cells[14].BackColor = System.Drawing.Color.Red; }
+            if (QA1 == "已關單") { e.Row.Cells[14].BackColor = System.Drawing.Color.Yellow; }
             //if (QA == "0" && QA1 == "已完成") { e.Row.Cells[13].BackColor = System.Drawing.Color.Red; }
-            if (POSTING == "0") { e.Row.Cells[14].BackColor = System.Drawing.Color.Red; }
-            if (STATUS == "0") { e.Row.Cells[15].BackColor = System.Drawing.Color.Red; }
-            if (PREPARATION_FLAG !="Y")
+            if (POSTING == "0") { e.Row.Cells[12].BackColor = System.Drawing.Color.Red; }
+            if (STATUS == "0") { e.Row.Cells[13].BackColor = System.Drawing.Color.Red; }
+            if (PREPARATION_FLAG != "Y")
             {
-                e.Row.Cells[0].Enabled = false;
-                e.Row.Cells[1].Enabled = false;
+                e.Row.Cells[17].Enabled = false;
+                e.Row.Cells[18].Enabled = false;
 
             }
         }
@@ -331,12 +331,12 @@ public partial class WH_EFLOW_MAS : System.Web.UI.Page
 
     private void CHECKPK_NO()
     {
-        string message = "",CONFIRM_TIME="";
+        string message = "", CONFIRM_TIME = "";
         int PK_NO = int.Parse(txt_PK_NO.Text.ToString());
         string REASON = txt_REASON.Text.ToString();
         string EMPNO = txt_EMPNO.Text.ToString().ToUpper().Trim();
         DataTable dt = ATMCdb.reDt("SELECT  [PK_NO],[CONFIRM_TIME],[CONFIRM_USER] FROM [TWM8].[dbo].[WH_EFLOW_MAS] WHERE [PK_NO]=" + PK_NO);
-        if (dt.Rows.Count >0)
+        if (dt.Rows.Count > 0)
         {
             CONFIRM_TIME = dt.Rows[0]["CONFIRM_TIME"].ToString();
             if (!CONFIRM_TIME.Equals(""))
@@ -344,11 +344,11 @@ public partial class WH_EFLOW_MAS : System.Web.UI.Page
                 message = "<embed src = 'error2.wav' width = '0' height = '0' id = 'music' autostart = 'true'></embed>";
                 message += " <script   language=javascript> window.alert( '該流水號已確校過') </script> ";
                 Response.Write(message);
-                
+
             }
             else
             {
-                string sparam = "UPDATE [TWM8].[dbo].[WH_EFLOW_MAS] SET [CONFIRM_TIME]=GETDATE(),[REASON]=[REASON]+'" + REASON+"' ,[CONFIRM_USER]='" + EMPNO + "' WHERE [PK_NO]="+ PK_NO ;
+                string sparam = "UPDATE [TWM8].[dbo].[WH_EFLOW_MAS] SET [CONFIRM_TIME]=GETDATE(),[REASON]=[REASON]+'" + REASON + "' ,[CONFIRM_USER]='" + EMPNO + "' WHERE [PK_NO]=" + PK_NO;
                 ATMCdb.Exsql(sparam);
                 Response.Write("<embed src = 'right.wav' width = '0' height = '0' id = 'music' autostart = 'true'></embed>");
                 capData2();
@@ -359,28 +359,28 @@ public partial class WH_EFLOW_MAS : System.Web.UI.Page
             message = "<embed src = 'error2.wav' width = '0' height = '0' id = 'music' autostart = 'true'></embed>";
             message += " <script   language=javascript> window.alert( '不存在此流水號，請確認之') </script> ";
             Response.Write(message);
-            
+
         }
     }
 
     protected void gdv_WH_EFLOW_MASDATA_RowCommand(object sender, GridViewCommandEventArgs e)
     {
-        string PK_NO = "", REASON = "", ENMNGS = "", POSTING = "", STATUS="";
+        string PK_NO = "", REASON = "", ENMNGS = "", POSTING = "", STATUS = "";
 
-         Button BTN = (Button)e.CommandSource;// 先抓到這個按鈕（我們設定了CommandName）
+        Button BTN = (Button)e.CommandSource;// 先抓到這個按鈕（我們設定了CommandName）
         GridViewRow myRow = (GridViewRow)BTN.NamingContainer; // 從你按下 Button按鈕的時候，NamingContainer知道你按下的按鈕在GridView「哪一列」！
-        PK_NO = gdv_WH_EFLOW_MASDATA.Rows[myRow.DataItemIndex].Cells[6].Text;
+        PK_NO = gdv_WH_EFLOW_MASDATA.Rows[myRow.DataItemIndex].Cells[4].Text;
         TextBox txt = (TextBox)gdv_WH_EFLOW_MASDATA.Rows[myRow.DataItemIndex].FindControl("txtREASON");
         REASON = txt.Text.ToString();
         TextBox txt2 = (TextBox)gdv_WH_EFLOW_MASDATA.Rows[myRow.DataItemIndex].FindControl("txtENMNGS");
-        ENMNGS = txt.Text.ToString();
+        ENMNGS = txt2.Text.ToString();
         DropDownList ddl = (DropDownList)gdv_WH_EFLOW_MASDATA.Rows[myRow.DataItemIndex].FindControl("ddl_POSTING");
         POSTING = ddl.SelectedValue.ToString();
         DropDownList ddl2 = (DropDownList)gdv_WH_EFLOW_MASDATA.Rows[myRow.DataItemIndex].FindControl("ddl_STATUS");
         STATUS = ddl2.SelectedValue.ToString();
         if (e.CommandName == "edit_data")
         {
-            UPDATEREASON( PK_NO,REASON,  POSTING,  STATUS);
+            UPDATEREASON(PK_NO, REASON, POSTING, STATUS);
             btn_search_Click(sender, e);
 
         }
@@ -394,10 +394,10 @@ public partial class WH_EFLOW_MAS : System.Web.UI.Page
 
         }
     }
-    private void UPDATEREASON(string PK_NO,string REASON,string POSTING,string STATUS)
+    private void UPDATEREASON(string PK_NO, string REASON, string POSTING, string STATUS)
     {
         string message = "";
-        string sparam = "UPDATE A  SET [REASON]=N'"+ REASON + "',[POSTING]="+ POSTING + ",[STATUS]="+ STATUS+ " FROM [TWM8].[dbo].[WH_EFLOW_MAS] A WHERE [PK_NO]=" + PK_NO ;
+        string sparam = "UPDATE A  SET [REASON]=N'" + REASON + "',[POSTING]=" + POSTING + ",[STATUS]=" + STATUS + " FROM [TWM8].[dbo].[WH_EFLOW_MAS] A WHERE [PK_NO]=" + PK_NO;
         string sparam2 = "UPDATE A  SET [POSTING]=" + POSTING + ",[ED_DATE]=getdate(),[NOTE]=N'人工修改狀態' FROM [TWM8].[dbo].[SKIN_WIP] A WHERE [EFLOW_MAS_PK_NO]=" + PK_NO;
         if (ATMCdb.Exsql(sparam + ";" + sparam2))
         {
@@ -411,6 +411,6 @@ public partial class WH_EFLOW_MAS : System.Web.UI.Page
             message += " <script   language=javascript> window.alert( '備註修改失敗') </script> ";
             Response.Write(message);
         }
-        
+
     }
 }

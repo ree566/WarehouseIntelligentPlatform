@@ -74,7 +74,6 @@
     <asp:ListView ID="ListView1" runat="server" OnItemCommand="ListView1_ItemCommand" OnItemDataBound="ListView1_ItemDataBound">
         <AlternatingItemTemplate>
             <td runat="server" style="background-color: #000073;">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <asp:Button ID="btn_EditD" runat="server" CommandName="edit_data" CausesValidation="False"
                         Text="修改"
                         OnClientClick="if (confirm('您確定要修改嗎?')==false) {return false;}"
@@ -86,7 +85,7 @@
                     <tr>
                         <td style="width: 120px; font-size: 20px; text-align: left;">儲位:</td>
                         <td align="left" style="font-size: 40px;">
-                            <asp:TextBox ID="txtLGPBE" class="form-control"  Text='<%# DataBinder.Eval(Container.DataItem, "LGPBE")%>' runat="server" AutoPostBack="True" autocomplete="off" Font-Size="X-Large" ></asp:TextBox>
+                            <asp:TextBox ID="txtLGPBE" class="form-control"  Text='<%# DataBinder.Eval(Container.DataItem, "LGPBE")%>' runat="server" AutoPostBack="False" autocomplete="off" Font-Size="X-Large" ></asp:TextBox>
                                 </td>
                     
                          
@@ -177,7 +176,7 @@
                         <tr>
                             <td style="width: 120px; font-size: 20px; text-align: left;">儲位:</td>
                         <td align="left" style="font-size: 40px;">
-                            <asp:TextBox ID="txtLGPBE" class="form-control"  Text='<%# DataBinder.Eval(Container.DataItem, "LGPBE")%>' runat="server"  autocomplete="off" Font-Size="X-Large"  AutoPostBack="True"></asp:TextBox>
+                            <asp:TextBox ID="txtLGPBE" class="form-control"  Text='<%# DataBinder.Eval(Container.DataItem, "LGPBE")%>' runat="server"  autocomplete="off" Font-Size="X-Large"  AutoPostBack="False"></asp:TextBox>
                                 </td>
                         </tr>
                         <tr>

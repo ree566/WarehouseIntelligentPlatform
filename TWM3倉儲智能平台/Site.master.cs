@@ -128,14 +128,31 @@ public partial class SiteMaster : MasterPage
     //    }
     //}
 
-    //protected void Page_Load(object sender, EventArgs e)
-    //{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        bool isLogin = Session["name"] != null;
 
-    //}
+        Login_Btn.Visible = !isLogin;
+        Logout_Btn.Visible = isLogin;
+
+    }
+
+
+
+    protected void LoginStatus1_LoggedOut(Object sender, System.EventArgs e)
+    {
+        Session.Clear();
+        Session.Abandon();
+        Response.Redirect("Login.aspx");
+        // Perform any post-logout processing, such as setting the
+        // user's last logout time or clearing a per-user cache of 
+        // objects here.
+    }
+
 
     //protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
     //{
     //    Context.GetOwinContext().Authentication.SignOut();
     //}
-   
+
 }

@@ -87,16 +87,17 @@ public partial class WH_DNPREPARE_DETAIL : System.Web.UI.Page
             string[] sArrayLGORT = strLGORT.Split(',');
 
             DataView view = new DataView(dt);
-            distinctValues = view.ToTable(true, "MATNR");
+            distinctValues = view.ToTable(true, "MATNR", "ZWERKS");
 
             foreach (string SubstrLGORT in sArrayLGORT)
             {
                 foreach (DataRow od in distinctValues.Rows)
                 {
                     string strMaterial = od["MATNR"].ToString();
+                    string zwerks = od["ZWERKS"].ToString();
                     IRfcStructure MARD = repository.GetStructureMetadata("MARD").CreateStructure();
                     MARD.SetValue("MATNR", strMaterial);
-                    MARD.SetValue("WERKS", strWERKS);
+                    MARD.SetValue("WERKS", zwerks);
                     MARD.SetValue("LGORT", SubstrLGORT);
                     ZMARD_INPUT.Insert(MARD);
                 }

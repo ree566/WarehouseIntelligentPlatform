@@ -316,15 +316,15 @@ public partial class SAPSTOCKS_M : System.Web.UI.Page
         string strMaterial = MATNR.ToString().TrimStart('0');
         //double ENTRY_QNT = 0;
         double[] ENTRY_QNT = new double[2] { 0, 0 };
-            string sParam = "SELECT ISNULL(SUM(CASE WHEN [CACHE_NAME] is not null AND [CACHE_NAME] <> '調整帳務' THEN [ENTRY_QNT] ELSE 0 END ),0),ISNULL(SUM(CASE WHEN [CACHE_NAME] is null THEN [ENTRY_QNT] ELSE 0 END ),0) FROM [TWM8].[dbo].[WH_STORAGE] WHERE  [STATUS]=0 AND [DISPLAY_FALG]='Y' AND [MATERIAL]='" + strMaterial + "' AND [PLANT]='" + strWERKS + "' ";
-            DataTable dt = ATMCdb.reDt(sParam);
-            if (dt.Rows.Count > 0)
-            {
+        string sParam = "SELECT ISNULL(SUM(CASE WHEN [CACHE_NAME] is not null AND [CACHE_NAME] <> '調整帳務' THEN [ENTRY_QNT] ELSE 0 END ),0),ISNULL(SUM(CASE WHEN [CACHE_NAME] is null THEN [ENTRY_QNT] ELSE 0 END ),0) FROM [TWM8].[dbo].[WH_STORAGE] WHERE  [STATUS]=0 AND [DISPLAY_FALG]='Y' AND [MATERIAL]='" + strMaterial + "' AND [PLANT]='" + strWERKS + "' ";
+        DataTable dt = ATMCdb.reDt(sParam);
+        if (dt.Rows.Count > 0)
+        {
 
-                ENTRY_QNT[0] = double.Parse(dt.Rows[0][0].ToString());
-                ENTRY_QNT[1] = double.Parse(dt.Rows[0][1].ToString());
+            ENTRY_QNT[0] = double.Parse(dt.Rows[0][0].ToString());
+            ENTRY_QNT[1] = double.Parse(dt.Rows[0][1].ToString());
 
-            }
+        }
         return ENTRY_QNT;
     }
     /// <summary>
@@ -338,18 +338,18 @@ public partial class SAPSTOCKS_M : System.Web.UI.Page
         string strMaterial = MATNR.ToString().TrimStart('0');
         //double ENTRY_QNT = 0;
         double ENTRY_QNT_TODAY = 0;
-            string sParam = "SELECT ISNULL(SUM([ENTRY_QNT]),0) FROM [TWM8].[dbo].[WH_STORAGE] WHERE  [STATUS]=1 AND [DISPLAY_FALG]='Y' AND CONVERT(DATE,[ED_DATE])=CONVERT(DATE,GETDATE()) AND [MATERIAL]='" + strMaterial + "' AND [PLANT]='" + strWERKS + "' ";
-            DataTable dt = ATMCdb.reDt(sParam);
-            if (dt.Rows.Count > 0)
-            {
+        string sParam = "SELECT ISNULL(SUM([ENTRY_QNT]),0) FROM [TWM8].[dbo].[WH_STORAGE] WHERE  [STATUS]=1 AND [DISPLAY_FALG]='Y' AND CONVERT(DATE,[ED_DATE])=CONVERT(DATE,GETDATE()) AND [MATERIAL]='" + strMaterial + "' AND [PLANT]='" + strWERKS + "' ";
+        DataTable dt = ATMCdb.reDt(sParam);
+        if (dt.Rows.Count > 0)
+        {
 
-                ENTRY_QNT_TODAY = double.Parse(dt.Rows[0][0].ToString());
-            }
+            ENTRY_QNT_TODAY = double.Parse(dt.Rows[0][0].ToString());
+        }
         return ENTRY_QNT_TODAY;
     }
     protected void btn_search_Click(object sender, EventArgs e)
     {
-        if (txt_MATNR.Text.ToString().Trim().Equals("") )
+        if (txt_MATNR.Text.ToString().Trim().Equals(""))
         {
             Response.Write(" <script   language=javascript> window.alert( '請輸入料號廠別再進行搜尋') </script> ");
         }
@@ -379,7 +379,7 @@ public partial class SAPSTOCKS_M : System.Web.UI.Page
         dtZMARD_OUTPUT.Rows[0][0] = MATNR;
         try
         {
-            dtZMARD_OUTPUT = SAPRFC.ZGBSN(dtZMARD_OUTPUT, strWERKS, strLGORT, "MATNR",0, SAPRFC.getSAPDB());
+            dtZMARD_OUTPUT = SAPRFC.ZGBSN(dtZMARD_OUTPUT, strWERKS, strLGORT, "MATNR", 0, SAPRFC.getSAPDB());
             if (dtZMARD_OUTPUT.Rows.Count > 0)
             {
                 if (!txtMD04DAYS.Text.ToString().Equals(""))
@@ -458,7 +458,7 @@ public partial class SAPSTOCKS_M : System.Web.UI.Page
         DataTable dt = capZGBSN(MATNR, strWERKS);
         dt = ATMCdb.DataTableFilterSort2(dt, "LABST>0 OR LGPBE<>''", "LGORT");
         int icount = dt.Rows.Count;
-        if (dt.Rows.Count>0)
+        if (dt.Rows.Count > 0)
         {
             string str = "";
             for (int i = 0; i < icount; i++)
@@ -472,13 +472,13 @@ public partial class SAPSTOCKS_M : System.Web.UI.Page
             ListView1.DataSource = dt;
             ListView1.DataBind();
         }
-        
+
         txt_MATNR.Attributes.Add("onfocus", "this.select();");
         txt_MATNR.Focus();
-       
+
         //lblimplementrate.Text = "總庫別有：<br>";
-        
-       
+
+
         //if (gdv_SAPSTOCKS.Rows.Count > 0)
         //{
         //    txt_MATNR.Text = "";
@@ -560,7 +560,7 @@ public partial class SAPSTOCKS_M : System.Web.UI.Page
     /// <param name="LGPBE"></param>
     /// <param name="EMPLR_ID"></param>
     /// <param name="LABST"></param>
-    void MODIFY_STORAGE_BIN(string MATNR, string WERKS, string LGORT, string OldLGPBE, string LGPBE, string EMPLR_ID,string LABST)
+    void MODIFY_STORAGE_BIN(string MATNR, string WERKS, string LGORT, string OldLGPBE, string LGPBE, string EMPLR_ID, string LABST)
     {
         if (SAPRFC.ZMM_MODIFY_STORAGE_BIN(MATNR, WERKS, LGORT, LGPBE, SAPRFC.getSAPDB()) == "OK")
         {
